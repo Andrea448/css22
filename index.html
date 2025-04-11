@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      height: 100vh;
+    }
+
+    .nav {
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+      background: rgb(247, 73, 174);
+  
+    }
+
+    .sidebar-left {
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+      background: rgb(182, 11, 91);
+    }
+
+    .main {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      background: rgb(110, 207, 53);
+    }
+
+    .sidebar-right {
+      grid-column: 3 / 4;
+      grid-row: 2 / 4;
+      background: rgb(43, 184, 209);
+    }
+
+    .section1 {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      background: rgb(228, 36, 36);
+    }
+
+    .section2 {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      background: rgb(31, 4, 4);
+    }
+
+  
+    @media (max-width: 550px) {
+  .container {
+ 
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, auto);
+    gap: 20px;
+
+  .sidebar-left,
+  .main,
+  .sidebar-right,
+  .section1,
+  .section2 {
+    grid-column: 1 / 2; /* Svi elementi u prvoj koloni */
+    grid-row: auto; /* Automatski redovi */
+  }
+}
+
+    .nav {
+        background-color: red;
+    }
+    .sidebar-left {
+     
+      background: rgb(175, 116, 116);
+    }
+
+    .main {
+      
+      background: rgb(41, 31, 87);
+    }
+
+    .sidebar-right {
+      
+      background: rgb(45, 194, 16);
+    }
+
+    .section1 {
+     
+      background: rgb(200, 221, 105);
+    }
+
+    .section2 {
+      
+      background: rgb(173, 22, 153);
+    }
+
+
+  
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">Nav</div>
+    <div class="sidebar-left">Sidebar</div>
+    <div class="main">Main</div>
+    <div class="sidebar-right">Sidebar</div>
+    <div class="section1">Section</div>
+    <div class="section2">Section</div>
+  </div>
+</body>
+</html>
+
+     
